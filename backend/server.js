@@ -1,3 +1,5 @@
+import dns from "node:dns";
+dns.setDefaultResultOrder("ipv4first");
 import app from "./src/app.js";
 import connectDB from "./src/configs/db.js";
 import { startBookingCleanupJob } from "./src/jobs/bookingCleanup.job.js";
