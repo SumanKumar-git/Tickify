@@ -133,7 +133,7 @@ export const sendOtpToVerifyEmail = async(req, res) => {
         res.cookie("token", token, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict",
+            sameSite: "none",
             maxAge: 3 * 24 * 60 * 60 * 1000
         });
 
@@ -243,7 +243,7 @@ export const userLogin = async (req, res) => {
         res.cookie("token", token, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict",
+            sameSite: "none",
             maxAge: 3 * 24 * 60 * 60 * 1000
         });
 
@@ -346,7 +346,7 @@ export const verifyResetOtp = async (req, res) => {
         res.cookie("resetToken", resetToken, {
             httpOnly: true,
             secure: true,
-            sameSite: "strict",
+            sameSite: "none",
             maxAge: 10 * 60 * 1000
         });
 
